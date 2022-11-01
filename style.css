@@ -1,0 +1,17 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100px;
+}
+
+.grid {
+    border: 0.1px solid black;
+    width: 6px;
+    height: 6px;
+}
