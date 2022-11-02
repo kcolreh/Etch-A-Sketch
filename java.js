@@ -8,12 +8,23 @@ for (let i = 0; i < 256; i++) {
 }
 
 
-//Paints the divs when you hover your mouse over them
+//Paints the divs when you hover your mouse over them;
 const hover = document.querySelectorAll('.grid');
 hover.forEach((div) => {
     div.addEventListener('mouseover', function () {
-        div.classList.add('change')
+        div.classList.add('change');
     });
+});
+
+//Erases all the painted divs;
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', function () {
+    const hover = document.querySelectorAll('.grid');
+    hover.forEach((div) => {
+        div.classList.remove('change');
+    })
+
+
 });
 
 //Erses the paint when you hover your mouse over them
@@ -22,7 +33,7 @@ eraser.addEventListener('click', function () {
     const hover2 = document.querySelectorAll('.grid');
     hover2.forEach((div) => {
         div.addEventListener('mouseover', function () {
-            div.classList.remove('change')
+            div.classList.remove('change');
         });
     });
 });
