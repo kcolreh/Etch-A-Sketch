@@ -1,11 +1,31 @@
 const container = document.querySelector('.container');
+const slider = document.querySelector('#range');
+const grid = document.querySelectorAll('.grid');
 
 
-for (let i = 0; i < 256; i++) {
-    const grid = document.createElement('div');
-    grid.classList.add('grid');
-    container.appendChild(grid);
+createGrid(); 
+
+slider.addEventListener('change', function () {
+    let boxes = document.querySelectorAll('.grid');
+    boxes.forEach(box => {
+        box.remove();//removes old grid
+    });
+    createGrid() //makes new grid afte reset
+})
+
+
+function createGrid() {
+    for (let i = 0; i < (slider.value * slider.value); i++) {
+        const grid = document.createElement('div');
+        let a = slider.value;
+        const boxSize = 250 / a; //Creates dynamic boxes
+        grid.classList.add('grid');
+        grid.style.width = boxSize + 'px';
+        grid.style.height = boxSize + 'px';
+        container.appendChild(grid);
+    }
 }
+
 
 
 //Paints the divs when you hover your mouse over them;
@@ -23,8 +43,6 @@ clear.addEventListener('click', function () {
     hover.forEach((div) => {
         div.classList.remove('change');
     })
-
-
 });
 
 //Erses the paint when you hover your mouse over them

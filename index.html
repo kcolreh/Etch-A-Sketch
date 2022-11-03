@@ -7,11 +7,19 @@
     <title>Etch-A-Sketch</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <H1>Etch-A-Sketch</H1>
+    </header>
+    <div class="buttons">
     <button class="btn" id="erase">Eraser</button>
     <button class="btn" id="clear">Clear</button>
     </div>
+    </div>
     <div class="container"></div>
+    <div class="slider">
+      <input id ="range" type="range" min="1" max="64" value="16" oninput="rangeValue.innerText = this.value">
+      <p id="rangeValue">16</p>
+    </div>
     <footer></footer>
   </body>
 </html>
