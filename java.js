@@ -1,8 +1,6 @@
 const container = document.querySelector('.container');
 const slider = document.querySelector('#range');
 const grid = document.querySelectorAll('.grid');
-
-
 createGrid();
 
 slider.addEventListener('change', function () {
@@ -14,7 +12,6 @@ slider.addEventListener('change', function () {
 
 
 })
-
 
 function createGrid() {
     for (let i = 0; i < (slider.value * slider.value); i++) {
@@ -46,7 +43,7 @@ clear.addEventListener('click', function () {
     })
 });
 
-//Erses the paint when you hover your mouse over them
+//Erases the paint when you hover your mouse over them
 const eraser = document.querySelector('#erase');
 eraser.addEventListener('click', function () {
     const boxes = document.querySelectorAll('.grid');
@@ -57,30 +54,32 @@ eraser.addEventListener('click', function () {
         });
     });
 });
-generateRandomColor ()
+
+
 const rainbow = document.querySelector('#rainbow');
 rainbow.addEventListener('click', function () {
     const boxes = document.querySelectorAll('.grid');
     boxes.forEach((div) => {
         div.addEventListener('mouseover', function () {
-            div.style.backgroundColor = generateRandomColor ();
+            div.style.backgroundColor = generateRandomColor();
         })
     })
 })
 
+//Lets user choose a color from the color wheel
 colorpicker.addEventListener('change', function () {
     const boxes = document.querySelectorAll('.grid');
     boxes.forEach((div) => {
         div.addEventListener('mouseover', function () {
             let color = colorpicker.value;
-            console.log(color)
             div.style.backgroundColor = color;
 
         })
     })
 })
 
-function generateRandomColor (){
+//Generates random color
+function generateRandomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);

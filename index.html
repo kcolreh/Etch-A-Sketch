@@ -10,20 +10,20 @@
     <header>
       <H1>Etch-A-Sketch</H1>
     </header>
-    <div class="colorpicker">
-   <label for="colorpicker">Color:</label>
-   <input type="color" id="colorpicker" value="#0000ff">
-    </div>
+    
     <div class="buttons">
     <button class="btn" id="erase">Eraser</button>
     <button class="btn" id="clear">Clear</button>
     <button class="btn" id="rainbow">rainbow</button>
+    <div class="color">
+      <label for="colorpicker"></label>
+      <input type="color" id="colorpicker" value="#000000">
+       </div>
     </div>
     </div>
     <div class="container"></div>
     <div class="slider">
-      <input id ="range" type="range" min="1" max="64" value="16" oninput="rangeValue.innerText = this.value">
-      <p id="rangeValue">16</p>
+      <input id ="range" type="range" min="1" max="64" value="16">
     </div>
     <footer></footer>
   </body>
