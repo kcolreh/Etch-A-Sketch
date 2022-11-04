@@ -17,7 +17,7 @@ function createGrid() {
     for (let i = 0; i < (slider.value * slider.value); i++) {
         const grid = document.createElement('div');
         let a = slider.value;
-        const boxSize = 250 / a; //Creates dynamic boxes
+        const boxSize = 650 / a; //Creates dynamic boxes
         grid.classList.add('grid');
         grid.style.width = boxSize + 'px';
         grid.style.height = boxSize + 'px';
